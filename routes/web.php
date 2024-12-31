@@ -1,6 +1,17 @@
 <?php
 
+use App\Livewire\ShowCategoria;
 use Illuminate\Support\Facades\Route;
+
+
+
+
+
+Route::get('categorias', ShowCategoria::class);
+
+
+
+
 
 Route::get('/', function () {
     return view('welcome');
