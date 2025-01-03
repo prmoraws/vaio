@@ -10,6 +10,12 @@ class ShowCategoria extends Component
 
     public $descricao, $nome;
 
+    protected $rules = [
+        'nome' => 'required|min:3|max:255',
+        'descricao' => 'required|min:3|max:500'
+    ];
+
+
     public function render()
     {
         $categorias = Categoria::get();
@@ -21,15 +27,13 @@ class ShowCategoria extends Component
 
     public function create()
     {
+        $this->validate();
 
         Categoria::create([
 
             'nome' => $this->nome,
             'descricao' => $this->descricao
-
         ]);
-
-        $this->nome = '';
-        $this->descricao = '';
+        redirect()->route('categorias');
     }
 }

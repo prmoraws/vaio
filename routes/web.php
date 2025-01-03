@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\EditCategoria;
 use App\Livewire\ShowCategoria;
 use Illuminate\Support\Facades\Route;
 
@@ -7,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('categorias', ShowCategoria::class);
+Route::get('categorias', ShowCategoria::class)->name('categorias');
 
 
 

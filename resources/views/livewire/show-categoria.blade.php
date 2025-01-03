@@ -27,25 +27,13 @@
                 </x-button>
             </div>
         </form>
-
+        <br>
         <hr>
-        <table class="table-auto">
-            <thead>
-                <tr>
-                    <th>Categoria</th>
-                    <th>Descrição</th>
-                </tr>
-            </thead>
-            @foreach ($categorias as $categoria)
-                <tbody>
-                    <tr>
-
-                        <td>{{ $categoria->nome }}</td>
-                        <td>{{ $categoria->descricao }}</td>
-
-                    </tr>
-                </tbody>
-            @endforeach
-        </table>
+        <br>
+        <livewire:categoria-table />
     </div>
+
+
+
+
 </div>
